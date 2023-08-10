@@ -26,13 +26,13 @@ public class StudentController {
         return "students";
     }
 
-    @GetMapping("/student/new")
+    @GetMapping("/students/new")
     public String createStudentForm(
             Model page
     ){
         Student student = new Student();
         page.addAttribute("student", student);
-        return "creat_student";
+        return "create_student";
     }
 
     @PostMapping("/students")
