@@ -34,7 +34,7 @@ public class EmployeeController {
             return new ResponseEntity(this.employeeService.getEmployeeById(employeeId), HttpStatus.OK);
         }
 
-        @PostMapping({"{id}"})
+        @PutMapping({"{id}"})
         public ResponseEntity<Employee> updateEmployee(@PathVariable("id") long employeeId, @RequestBody Employee employee) {
             return new ResponseEntity(this.employeeService.updateEmployee(employee, employeeId), HttpStatus.OK);
         }
