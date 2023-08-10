@@ -1,26 +1,25 @@
 package com.example.studentmgtsys.controller;
 
-import com.example.studentmgtsys.service.impl.StudentServiceImpl;
+import com.example.studentmgtsys.service.StudentService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class StudentController {
-    private StudentServiceImpl studentService;
+    private StudentService studentService;
 
-    public StudentController( StudentServiceImpl studentService){
+    public StudentController( StudentService studentService){
         super();
         this.studentService=studentService;
     }
 
     // a method receive a student list and display
-    @GetMapping("/")
+    @GetMapping("/students")
     public String studentList(
             Model page
     ){
     page.addAttribute("students", studentService.getAllStudents());
-
         return "students";
     }
 }

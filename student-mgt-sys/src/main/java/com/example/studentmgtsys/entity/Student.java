@@ -2,14 +2,13 @@ package com.example.studentmgtsys.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-
 @Data
 @Entity
 @Table(name = "students")
-public class Student {
+public class Student{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(name="first_name", nullable = false)
     private String firstName;
@@ -19,4 +18,5 @@ public class Student {
 
     @Column(name="email")
     private String email;
+
 }

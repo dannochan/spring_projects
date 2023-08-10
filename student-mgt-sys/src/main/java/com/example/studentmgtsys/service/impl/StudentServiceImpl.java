@@ -6,6 +6,7 @@ import com.example.studentmgtsys.service.StudentService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service
 public class StudentServiceImpl implements StudentService {
     // declare the repository
