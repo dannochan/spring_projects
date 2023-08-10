@@ -37,13 +37,15 @@ public class StudentServiceImpl implements StudentService {
     // update student information
 
     @Override
-    public Student updateStudent(long id) {
-        return null;
+    public Student updateStudent(Student student) {
+
+        return studentRepository.save(student);
     }
+
     // delete student
 
     @Override
     public void deleteStudent(long id) {
-
+       studentRepository.deleteById(id);
     }
 }
