@@ -19,7 +19,7 @@
             <input
             type="text"
             name="firstName"
-            th:field="firstName"
+            th:field="*{firstName}"
             class="form-control"
             placeholder="Enter Student First Name"
             />
@@ -29,7 +29,7 @@
             <input
                     type="text"
                     name="lastName"
-                    th:field="lastName"
+                    th:field="*{lastName}"
                     class="form-control"
                     placeholder="Enter Student Last Name"
             />
@@ -39,7 +39,7 @@
             <input
                     type="text"
                     name="email"
-                    th:field="email"
+                    th:field="*{email}"
                     class="form-control"
                     placeholder="Enter Student Email"
             />
