@@ -26,14 +26,8 @@ public class StudentServiceImpl implements StudentService {
     // add new Student to DB
     @Override
     public Student addStudent(Student student) {
-        Student newStudent = new Student();
-        newStudent.setFirstName(student.getFirstName());
-        newStudent.setLastName(student.getLastName());
-        newStudent.setEmail(student.getEmail());
 
-        studentRepository.save(newStudent);
-
-        return newStudent;
+        return studentRepository.save(student);
     }
     // update student information
 
