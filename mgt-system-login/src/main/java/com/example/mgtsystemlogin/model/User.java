@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @Entity
@@ -35,4 +36,14 @@ public class User {
                     name = "role_id", referencedColumnName = "id")
             )
     private Collection<Role> roles;
+
+    public User() {
+    }
+    public User(String firstName, String lastName, String password, String email, Collection<Role> roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.email = email;
+        this.roles = roles;
+    }
 }
